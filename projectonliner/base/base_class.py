@@ -26,7 +26,7 @@ class Base():
         print(now_date)
         name_screenshot = 'test' + now_date + '.png'
 
-        self.driver.save_screenshot('D:\\Stepik\\pythonProject\\HW\\mainproject\\screen' + name_screenshot)
+        self.driver.save_screenshot('D:\\Stepik\\pythonProject\\HW\\projectonliner\\screen\\ ' + name_screenshot)
 
 # Method assert url
 

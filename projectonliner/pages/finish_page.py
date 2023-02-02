@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from mainproject.base.base_class import Base
+from projectonliner.base.base_class import Base
 
 
 class Finish_page(Base):
@@ -36,7 +36,7 @@ class Finish_page(Base):
 
     def finish(self):
         self.get_current_url()
-        self.assert_url('https://www.saucedemo.com/checkout-complete.html')
+        self.assert_url('https://mobistore.by/cart')
         self.get_screenshot()
 
 

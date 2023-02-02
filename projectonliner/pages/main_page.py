@@ -17,11 +17,7 @@ class Main_page(Base):
     main_page_logo_click = "//*[@id='main-header']/div/div/div[1]/a/img"
     computers_click = "//*[@id='navbar']/ul[1]/li[5]"
     notebook_click = "//*[@id='cat-list']/ul/li[1]/a"
-    # select_product_2 = "//*[@id='add-to-cart-sauce-labs-bike-light']"
-    # select_product_3 = "//*[@id='add-to-cart-sauce-labs-bolt-t-shirt']"
-    # cart = "//*[@id='shopping_cart_container']/a"
-    # menu = "//*[@id='react-burger-menu-btn']"
-    # link_about = "//*[@id='about_sidebar_link']"
+
     # Getters
     def get_main_page_logo_click(self):
         return WebDriverWait(self.driver_g, 30).until(
@@ -32,16 +28,7 @@ class Main_page(Base):
 
     def get_notebook_click(self):
         return WebDriverWait(self.driver_g, 30).until(EC.element_to_be_clickable((By.XPATH, self.notebook_click)))
-    #
-    # def get_cart(self):
-    #     return WebDriverWait(self.driver_g, 30).until(EC.element_to_be_clickable((By.XPATH, self.cart)))
-    #
-    # def get_menu(self):
-    #     return WebDriverWait(self.driver_g, 30).until(EC.element_to_be_clickable((By.XPATH, self.menu)))
-    #
-    # def get_link_about(self):
-    #     return WebDriverWait(self.driver_g, 30).until(EC.element_to_be_clickable((By.XPATH, self.link_about)))
-    # Actions
+
 
     def main_logo_click(self):
         self.get_main_page_logo_click().click()
@@ -54,18 +41,6 @@ class Main_page(Base):
     def click_notebook(self):
         self.get_notebook_click().click()
         print("Click notebook button")
-    #
-    # def click_cart(self):
-    #     self.get_cart().click()
-    #     print("Click move to cart")
-    #
-    # def click_menu(self):
-    #     self.get_menu().click()
-    #     print("Click menu")
-    #
-    # def click_link_about(self):
-    #     self.get_link_about().click()
-    #     print("Click Link about")
 
     # Methods
 
@@ -76,18 +51,4 @@ class Main_page(Base):
         self.get_current_url()
         self.assert_url('https://mobistore.by/noutbuki')
 
-    # def select_products_2(self):
-    #     self.get_current_url()
-    #     self.click_select_product_2()
-    #     self.click_cart()
-    #
-    # def select_products_3(self):
-    #     self.get_current_url()
-    #     self.click_select_product_3()
-    #     self.click_cart()
-    #
-    # def menu_select_about(self):
-    #     self.get_current_url()
-    #     self.click_menu()
-    #     self.click_link_about()
-    #     self.assert_url('https://saucelabs.com/')
+
